@@ -15,6 +15,17 @@ public class NhanVien {
 
     public NhanVien() {
     }
+
+    public NhanVien(String ten, String gioiTinh, int tuoi, String queQuan, String soDT, String email, int luong) {
+        this.ten = ten;
+        this.gioiTinh = gioiTinh;
+        this.tuoi = tuoi;
+        this.queQuan = queQuan;
+        this.soDT = soDT;
+        this.email = email;
+        Luong = luong;
+    }
+
     public NhanVien(String ten, String gioiTinh, int tuoi, String queQuan, String soDT, String email, int luong, int maPB, int maNguoiQL) {
         this.ten = ten;
         this.gioiTinh = gioiTinh;
@@ -27,7 +38,9 @@ public class NhanVien {
         this.maNguoiQL = maNguoiQL;
     }
 
-    public NhanVien(String ten, String gioiTinh, int tuoi, String queQuan, String soDT, String email, int luong, int maPB, int maNguoiQL, String tenPB) {
+    public NhanVien(int maNV, String ten, String gioiTinh, int tuoi, String queQuan,
+                    String soDT, String email, int luong, int maPB, int maNguoiQL) {
+        this.maNV = maNV;
         this.ten = ten;
         this.gioiTinh = gioiTinh;
         this.tuoi = tuoi;
@@ -37,6 +50,32 @@ public class NhanVien {
         Luong = luong;
         this.maPB = maPB;
         this.maNguoiQL = maNguoiQL;
+    }
+
+    public NhanVien(int maNV, String ten, String gioiTinh, int tuoi, String queQuan, String soDT, String email, int luong, int maPB, int maNguoiQL, String tenPB) {
+        this.maNV = maNV;
+        this.ten = ten;
+        this.gioiTinh = gioiTinh;
+        this.tuoi = tuoi;
+        this.queQuan = queQuan;
+        this.soDT = soDT;
+        this.email = email;
+        Luong = luong;
+        this.maPB = maPB;
+        this.maNguoiQL = maNguoiQL;
+        this.tenPB = tenPB;
+    }
+
+    public NhanVien(int maNV, String ten, String gioiTinh, int tuoi, String queQuan, String soDT, String email, int luong, int maPB, String tenPB) {
+        this.maNV = maNV;
+        this.ten = ten;
+        this.gioiTinh = gioiTinh;
+        this.tuoi = tuoi;
+        this.queQuan = queQuan;
+        this.soDT = soDT;
+        this.email = email;
+        Luong = luong;
+        this.maPB = maPB;
         this.tenPB = tenPB;
     }
 
@@ -128,8 +167,23 @@ public class NhanVien {
         this.tenPB = tenPB;
     }
 
-    public String Thongtinnhanvien() {
-        return "NhanVien [" +
+    public String ThongTinQuanLY() {
+        return "Quản Lý [" +
+                "maNV=" + maNV +
+                ", ten='" + ten + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
+                ", tuoi=" + tuoi +
+                ", queQuan='" + queQuan + '\'' +
+                ", soDT='" + soDT + '\'' +
+                ", email='" + email + '\'' +
+                ", Luong=" + Luong +
+                ", maPB=" + maPB +
+                ", tenPB='" + tenPB + '\'' +
+                ']';
+    }
+
+    public String Thongtinnhanvienkemtenphongban() {
+        return "NhanVien{" +
                 "maNV=" + maNV +
                 ", ten='" + ten + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
@@ -141,10 +195,10 @@ public class NhanVien {
                 ", maPB=" + maPB +
                 ", maNguoiQL=" + maNguoiQL +
                 ", tenPB='" + tenPB + '\'' +
-                ']';
+                '}';
     }
 
-    public String Thongtinnhanvien2() {
+    public String Thongtinnhanvienkhongkemtenphongban() {
         return "NhanVien [" +
                 "maNV=" + maNV +
                 ", ten='" + ten + '\'' +

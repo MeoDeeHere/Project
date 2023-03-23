@@ -14,6 +14,11 @@ public class PhongBan {
         this.maQL = maQL;
     }
 
+    public PhongBan(String tenPB, int maQL) {
+        this.tenPB = tenPB;
+        this.maQL = maQL;
+    }
+
     public int getMaPB() {
         return maPB;
     }
